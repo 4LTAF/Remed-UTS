@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!-- Membuat array
+
+        <div id="divid"></div>
+    <script>
+        var mobil = ["Avanza", "Agya", "Ayla"];
+        mobil[0] = "Kijang";
+        console.log(mobil[0]);
+        document.getElementById('divid').innerHTML = mobil[1];
+    </script> -->
+
+    <!-- Menghitung data array 
+        
+        <div id="divid"></div>
+    <script>
+        var mobil = ["Avanza", "Agya", "Ayla", "Fortuner", "BMW", "Kijang"];
+        console.log(mobil.length);
+        document.getElementById('divid').innerHTML = "Jumlah Elemen Array Mobil " + mobil.length;
+    </script> -->
+
+    <!-- Mengakses data array
+
+    <div id="divid"></div>
+    <div id="dividx"></div>
+    <script>
+        var mobil = ["Avanza", "Agya", "Ayla", "Fortuner", "BMW", "Kijang"];
+        var mobilPertama = mobil[0];
+        var mobilTerakhir = mobil[mobil.length - 1];
+        console.log("Mobil Pertama adalah " + mobilPertama);
+        console.log("Mobil Terakhir adalah " + mobilTerakhir);
+        document.getElementById('divid').innerHTML = "Mobil Pertama adalah " + mobilPertama;
+        document.getElementById('dividx').innerHTML = "Mobil Terakhir adalah " + mobilTerakhir;
+    </script> -->
+
+    <!-- Merubah array menjadi String
+
+    <div id="divid"></div>
+    <script>
+        var mobil = ["Avanza", "Agya", "Ayla"];
+        var buah = ["pisang", "pepaya", "rambutan"];
+        console.log("Saya telah memiliki banyak mobil antara lain " + mobil.toString());
+        document.getElementById('divid').innerHTML = "Saya suka buah-buahan " + buah.toString();
+    </script> -->
+
+    <!-- Merubah array menjadi String .join
+
+    <div id="divid"></div>
+    <script>
+        var mobil = ["Avanza", "Agya", "Ayla"];
+        var buah = ["pisang", "pepaya", "rambutan"];
+        console.log("Saya telah memiliki banyak mobil antara lain " + mobil.join(" - "));
+        document.getElementById('divid').innerHTML = "Saya suka buah-buahan " + buah.join(", ");
+    </script> -->
+
+    <!-- Mengeluarkan elemen terakhir array .pop
+
+    <div id="divid"></div>
+    <script>
+        var mobil = ["Avanza", "Agya", "Ayla"];
+        mobil.pop();
+        document.getElementById("divid").innerHTML = mobil;
+    </script> -->
+
+    <!-- Memasukkan data array .push
+
+    <div id="divid"></div>
+    <script>
+        var mobil = ["Avanza", "Agya", "Ayla"];
+        mobil.push("Fortuner");
+        console.log("Saya telah memiliki banyak mobil antara lain " + mobil.join(", "));
+    </script> -->
+
+    <!-- Menggabungkan 2 array .concat
+    <div id="divid"></div>
+    <script>
+        var mobilMahal = ["Fortuner", "Lamborghini"];
+        var mobilBiasa = ["Avanza", "Agya", "Ayla"];
+        var mobil = mobilBiasa.concat(mobilMahal);
+        document.getElementById("divid").innerHTML = mobil;
+    </script> -->
+
+    <!-- Membuat Looping for array
+
+    <div id="divid"></div>
+    <script>
+        var mobil = ["Avanza", "Agya", "Ayla"];
+        var teks, i;
+        teks = "<ul>";
+        for (i = 0; i < mobil.length; i++) {
+            teks += "<li>" + mobil[i] + "</li>";
+        }
+        teks += "</ul>";
+        document.getElementById("divid").innerHTML = teks;
+    </script> -->
+
+    <!-- Membuat Looping foreach array
+
+    <div id="divid"></div>
+    <script>
+        var mobil = ["Avanza", "Agya", "Ayla"];
+        var teks, i;
+        teks = "<ul>";
+        mobil.forEach(fungsiMobil)
+        teks += "</ul>";
+        function fungsiMobil(value) {
+            teks += "<li>" + value + "</li>";
+        }
+        document.getElementById("divid").innerHTML = teks;
+    </script> -->
+
+    iterasi menggunakan metode .map
+
+    <div id="divid"></div>
+    <script>
+        var nomor1 = [4, 9, 16, 25];
+        var nomor2 = nomor1.map(kaliDua);
+
+        function kaliDua(value, index, array) {
+            return value * 2;
+
+        }
+        console.log(nomor2);
+    </script>
+</body>
+
+</html>
